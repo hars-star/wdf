@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - StudentHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Semantic Header -->
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="site-title" aria-label="StudentHub Home">Student<span>Hub</span></a>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Semantic Breadcrumbs Navigation -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb Navigation">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Register</li>
+        </ol>
+    </nav>
+
+    <!-- Semantic Main Content -->
+    <main id="main-content" class="main-content" role="main">
+
+        <section aria-labelledby="register-heading">
+            <h1 id="register-heading">Student Registration</h1>
+            <p>Join StudentHub to register for events, access academic resources, and participate in campus activities.</p>
+            
+            <form action="#" method="post" aria-label="Student Registration Form">
+                <div class="form-group">
+                    <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="full-name" name="name" required placeholder="e.g. Harshit Dhanani" autocomplete="name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email-addr">Email Address <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email-addr" name="email" required placeholder="student@charusat.edu.in" autocomplete="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mobile-no">Mobile Number <span aria-hidden="true">*</span></label>
+                    <input type="tel" id="mobile-no" name="mobile" required placeholder="10-digit number" pattern="[0-9]{10}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="department">Department <span aria-hidden="true">*</span></label>
+                    <select id="department" name="department" required>
+                        <option value="">Select your Department</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="CE">Computer Engineering</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="EC">Electronics & Communication</option>
+                        <option value="ME">Mechanical Engineering</option>
+                        <option value="Civil">Civil Engineering</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password <span aria-hidden="true">*</span></label>
+                    <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password">
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="terms" required> I agree to the <a href="terms.html">Terms and Conditions</a> and privacy guidelines.
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-container">
+            <div>
+                <h4>StudentHub Academic Portal</h4>
+                <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;">
+                    Charotar University of Science and Technology (CHARUSAT)<br>
+                    Faculty of Technology and Engineering (FTE)
+                </p>
+            </div>
+            <div>
+                <h4>Navigation Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html">Campus Events</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support & Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Give Feedback</a></li>
+                    <li><a href="register.html">Student Registration</a></li>
+                    <li><a href="login.html">Login Portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026-27 CHARUSAT FTE - ITUE203 Web Development Frameworks Practical 2. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

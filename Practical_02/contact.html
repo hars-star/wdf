@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - StudentHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Semantic Header -->
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="site-title" aria-label="StudentHub Home">Student<span>Hub</span></a>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Semantic Breadcrumbs Navigation -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb Navigation">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Contact Us</li>
+        </ol>
+    </nav>
+
+    <!-- Semantic Main Content -->
+    <main id="main-content" class="main-content" role="main">
+
+        <section aria-labelledby="contact-heading">
+            <h1 id="contact-heading">Contact University Support</h1>
+            <p>Have questions regarding admissions, event registrations, or technical issues? Send us a message.</p>
+            
+            <div class="content-layout with-sidebar">
+                <form action="#" method="post" aria-label="Contact Inquiries Form">
+                    <div class="form-group">
+                        <label for="c-name">Your Full Name</label>
+                        <input type="text" id="c-name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="c-email">Your Email Address</label>
+                        <input type="email" id="c-email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="c-subject">Subject</label>
+                        <input type="text" id="c-subject" name="subject" required placeholder="Subject of inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Message</label>
+                        <textarea id="c-message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Inquiry</button>
+                </form>
+                
+                <aside>
+                    <h3>Campus Contact Info</h3>
+                    <address style="font-style: normal; line-height: 1.8;">
+                        <strong>CHARUSAT Campus</strong><br>
+                        Highway 139, Changa,<br>
+                        District Anand, Gujarat 388421<br>
+                        <strong>Phone:</strong> +91 2697 265011<br>
+                        <strong>Email:</strong> info@charusat.ac.in
+                    </address>
+                </aside>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-container">
+            <div>
+                <h4>StudentHub Academic Portal</h4>
+                <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;">
+                    Charotar University of Science and Technology (CHARUSAT)<br>
+                    Faculty of Technology and Engineering (FTE)
+                </p>
+            </div>
+            <div>
+                <h4>Navigation Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html">Campus Events</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support & Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Give Feedback</a></li>
+                    <li><a href="register.html">Student Registration</a></li>
+                    <li><a href="login.html">Login Portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026-27 CHARUSAT FTE - ITUE203 Web Development Frameworks Practical 2. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
