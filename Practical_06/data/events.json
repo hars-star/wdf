@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "HackCHARUSAT 2026",
+    "category": "Technical",
+    "date": "2026-11-15",
+    "venue": "Central Auditorium",
+    "seats": 150,
+    "status": "Upcoming",
+    "description": "36-hour national level flagship hackathon with tracks on AI, Web3, and Cloud."
+  },
+  {
+    "id": 2,
+    "title": "Cloud & DevOps Masterclass",
+    "category": "Workshop",
+    "date": "2026-11-20",
+    "venue": "FTE Lab 304",
+    "seats": 60,
+    "status": "Upcoming",
+    "description": "Hands-on workshop on Docker containers, Kubernetes, and CI/CD pipelines."
+  },
+  {
+    "id": 3,
+    "title": "Spoural Cultural Fest",
+    "category": "Cultural",
+    "date": "2026-12-05",
+    "venue": "Amphitheatre",
+    "seats": 500,
+    "status": "Upcoming",
+    "description": "Annual university cultural festival featuring dance, music, drama, and celebrity night."
+  },
+  {
+    "id": 4,
+    "title": "AI & LLM Frontiers Symposium",
+    "category": "Seminar",
+    "date": "2026-11-10",
+    "venue": "Seminar Hall B",
+    "seats": 120,
+    "status": "Upcoming",
+    "description": "Keynotes by AI research leaders on transformer architectures and agent systems."
+  },
+  {
+    "id": 5,
+    "title": "Inter-College Football Cup",
+    "category": "Sports",
+    "date": "2026-11-25",
+    "venue": "University Sports Ground",
+    "seats": 80,
+    "status": "Upcoming",
+    "description": "7-a-side inter-college football tournament with exciting faculty rivalries."
+  },
+  {
+    "id": 6,
+    "title": "Full-Stack Web Bootcamp",
+    "category": "Workshop",
+    "date": "2026-11-28",
+    "venue": "IT Dept Lab 1",
+    "seats": 50,
+    "status": "Upcoming",
+    "description": "Building dynamic full-stack applications with React, PHP, and MySQL."
+  },
+  {
+    "id": 7,
+    "title": "Cyber Security & CTF Challenge",
+    "category": "Technical",
+    "date": "2026-12-01",
+    "venue": "Cyber Security Lab",
+    "seats": 70,
+    "status": "Upcoming",
+    "description": "Hands-on penetration testing, ethical hacking tools, and live CTF challenges."
+  },
+  {
+    "id": 8,
+    "title": "Campus Startup Pitch 2026",
+    "category": "Seminar",
+    "date": "2026-12-12",
+    "venue": "Incubation Center",
+    "seats": 100,
+    "status": "Upcoming",
+    "description": "Pitch student startup ideas to angel investors and industry founders."
+  },
+  {
+    "id": 9,
+    "title": "RoboWars & Combat Arena",
+    "category": "Technical",
+    "date": "2026-12-18",
+    "venue": "Open Air Arena",
+    "seats": 90,
+    "status": "Upcoming",
+    "description": "Combat robotics showdown between 15kg and 30kg wired and wireless bots."
+  },
+  {
+    "id": 10,
+    "title": "Short Film & Photography Showcase",
+    "category": "Cultural",
+    "date": "2026-12-22",
+    "venue": "Media Studio",
+    "seats": 80,
+    "status": "Upcoming",
+    "description": "Screening of student-directed short films, documentaries, and photo stories."
+  },
+  {
+    "id": 11,
+    "title": "Quantum Computing 101",
+    "category": "Seminar",
+    "date": "2026-12-28",
+    "venue": "Physics Lecture Hall",
+    "seats": 60,
+    "status": "Upcoming",
+    "description": "Introduction to qubits, quantum superposition, and Qiskit algorithms."
+  },
+  {
+    "id": 12,
+    "title": "Mobile App UI/UX Design Sprint",
+    "category": "Workshop",
+    "date": "2027-01-08",
+    "venue": "Design Studio 2",
+    "seats": 45,
+    "status": "Upcoming",
+    "description": "3-day Figma prototyping sprint creating user-centric mobile application mockups."
+  },
+  {
+    "id": 13,
+    "title": "Intra-University Chess Master",
+    "category": "Sports",
+    "date": "2027-01-14",
+    "venue": "Student Activity Center",
+    "seats": 64,
+    "status": "Upcoming",
+    "description": "FIDE rated rapid chess tournament across all university undergraduate programs."
+  },
+  {
+    "id": 14,
+    "title": "Blockchain & Smart Contracts Lab",
+    "category": "Technical",
+    "date": "2027-01-20",
+    "venue": "CE Dept Lab 4",
+    "seats": 55,
+    "status": "Upcoming",
+    "description": "Writing and deploying Ethereum Solidity smart contracts and dApps."
+  },
+  {
+    "id": 15,
+    "title": "Alumni Mentorship Conclave",
+    "category": "Seminar",
+    "date": "2027-01-26",
+    "venue": "Central Auditorium",
+    "seats": 250,
+    "status": "Upcoming",
+    "description": "Networking conclave connecting graduating seniors with alumni working across FAANG."
+  }
+]

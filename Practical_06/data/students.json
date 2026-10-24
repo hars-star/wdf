@@ -1,0 +1,17 @@
+[
+  { "id": 1, "enrollment": "23IT001", "name": "Harshit Dhanani", "email": "hrdhanani2117@gmail.com", "department": "Information Technology", "course": "B.Tech IT", "year": 3, "gpa": 3.85, "status": "Active" },
+  { "id": 2, "enrollment": "23CE002", "name": "Aarav Patel", "email": "aarav.p@studenthub.com", "department": "Computer Engineering", "course": "B.Tech CE", "year": 3, "gpa": 3.90, "status": "Active" },
+  { "id": 3, "enrollment": "23IT003", "name": "Diya Shah", "email": "diya.s@studenthub.com", "department": "Information Technology", "course": "B.Tech IT", "year": 2, "gpa": 3.75, "status": "Active" },
+  { "id": 4, "enrollment": "23EC004", "name": "Rohan Mehta", "email": "rohan.m@studenthub.com", "department": "Electronics & Comm.", "course": "B.Tech EC", "year": 4, "gpa": 3.40, "status": "Active" },
+  { "id": 5, "enrollment": "23CS005", "name": "Ananya Sharma", "email": "ananya.s@studenthub.com", "department": "Computer Science", "course": "B.Tech CSE", "year": 3, "gpa": 3.95, "status": "Active" },
+  { "id": 6, "enrollment": "23ME006", "name": "Karan Joshi", "email": "karan.j@studenthub.com", "department": "Mechanical Engg", "course": "B.Tech ME", "year": 2, "gpa": 3.20, "status": "Active" },
+  { "id": 7, "enrollment": "23CE007", "name": "Isha Desai", "email": "isha.d@studenthub.com", "department": "Computer Engineering", "course": "B.Tech CE", "year": 3, "gpa": 3.80, "status": "Active" },
+  { "id": 8, "enrollment": "23IT008", "name": "Devansh Trivedi", "email": "devansh.t@studenthub.com", "department": "Information Technology", "course": "B.Tech IT", "year": 1, "gpa": 3.65, "status": "Active" },
+  { "id": 9, "enrollment": "23CL009", "name": "Pooja Varma", "email": "pooja.v@studenthub.com", "department": "Civil Engineering", "course": "B.Tech Civil", "year": 4, "gpa": 3.30, "status": "Active" },
+  { "id": 10, "enrollment": "23CS010", "name": "Siddharth Rao", "email": "siddharth.r@studenthub.com", "department": "Computer Science", "course": "B.Tech CSE", "year": 3, "gpa": 3.70, "status": "Active" },
+  { "id": 11, "enrollment": "23EE011", "name": "Tanvi Parekh", "email": "tanvi.p@studenthub.com", "department": "Electrical Engg", "course": "B.Tech EE", "year": 2, "gpa": 3.55, "status": "Active" },
+  { "id": 12, "enrollment": "23IT012", "name": "Vivek Soni", "email": "vivek.s@studenthub.com", "department": "Information Technology", "course": "B.Tech IT", "year": 4, "gpa": 3.45, "status": "Active" },
+  { "id": 13, "enrollment": "23CE013", "name": "Meera Bhatt", "email": "meera.b@studenthub.com", "department": "Computer Engineering", "course": "B.Tech CE", "year": 2, "gpa": 3.88, "status": "Active" },
+  { "id": 14, "enrollment": "23EC014", "name": "Aditya Nair", "email": "aditya.n@studenthub.com", "department": "Electronics & Comm.", "course": "B.Tech EC", "year": 3, "gpa": 3.60, "status": "Active" },
+  { "id": 15, "enrollment": "23IT015", "name": "Khushi Dave", "email": "khushi.d@studenthub.com", "department": "Information Technology", "course": "B.Tech IT", "year": 3, "gpa": 3.92, "status": "Active" }
+]

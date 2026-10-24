@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Practical 6: Fetch API, Search, Filter & Pagination</title>
+    <link rel="stylesheet" href="css/data-view.css">
+</head>
+<body>
+    <div class="data-container">
+        <header class="data-header">
+            <h1>StudentHub Dynamic JSON Data Explorer</h1>
+            <p style="color: var(--text-muted);">Asynchronous data consumption using JavaScript Fetch API with client-side search, filtering, and localStorage caching.</p>
+        </header>
+
+        <!-- Dataset Switcher Tabs -->
+        <nav class="tabs-nav" aria-label="Dataset navigation">
+            <button class="tab-btn active" data-tab="events">📅 Campus Events (15)</button>
+            <button class="tab-btn" data-tab="students">🎓 Student Profiles (15)</button>
+            <button class="tab-btn" data-tab="faqs">❓ Knowledge Base FAQs (15)</button>
+        </nav>
+
+        <!-- Filter & Search Controls -->
+        <div class="filter-bar">
+            <div class="search-input-box">
+                <input type="text" id="searchInput" placeholder="Search by keyword, name, date, venue, category...">
+            </div>
+
+            <div class="filter-controls">
+                <select id="categoryFilter" aria-label="Filter by category or department">
+                    <option value="">All Categories / Departments</option>
+                </select>
+
+                <select id="sortBy" aria-label="Sort dataset">
+                    <option value="name-asc">Sort: A to Z</option>
+                    <option value="name-desc">Sort: Z to A</option>
+                    <option value="date-asc">Sort: Earliest Date</option>
+                    <option value="gpa-desc">Sort: Highest GPA</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Result Status -->
+        <div class="status-bar">
+            <span id="resultCount">Loading dataset...</span>
+            <small style="color: #16a34a;">⚡ Fast in-memory filtering</small>
+        </div>
+
+        <!-- Main Dynamic Content Container -->
+        <main id="dataContent" role="main">
+            <!-- Dynamically populated by fetch_render.js -->
+        </main>
+
+        <!-- Pagination Controls -->
+        <nav id="paginationControls" class="pagination" aria-label="Data Pagination"></nav>
+    </div>
+
+    <script src="js/fetch_render.js"></script>
+</body>
+</html>

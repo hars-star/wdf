@@ -1,0 +1,17 @@
+[
+  { "id": 1, "category": "Admissions", "question": "What is the enrollment procedure for FTE engineering courses?", "answer": "Admissions are conducted through ACPC counseling based on GUJCET and JEE Main percentile scores." },
+  { "id": 2, "category": "Admissions", "question": "Can I transfer between departments after the first year?", "answer": "Branch transfers are permitted after the second semester subject to vacancy and minimum CGPA criteria of 8.0." },
+  { "id": 3, "category": "Events", "question": "How do I register for HackCHARUSAT 2026?", "answer": "You can register directly through the StudentHub Events page using your student portal login." },
+  { "id": 4, "category": "Events", "question": "Are non-CHARUSAT university students allowed in Spoural?", "answer": "Yes, designated inter-college competitions during Spoural allow external participation with valid college IDs." },
+  { "id": 5, "category": "Technical", "question": "How do I reset my StudentHub portal password?", "answer": "Click 'Forgot Password' on the login screen or submit a ticket through the Contact Support module." },
+  { "id": 6, "category": "Technical", "question": "Which browsers are officially supported?", "answer": "Chrome, Firefox, Safari, and Edge are fully supported across both desktop and mobile platforms." },
+  { "id": 7, "category": "Academics", "question": "Where can I view my internal continuous evaluation marks?", "answer": "Internal grades are published on your Student Overview Dashboard under the Academic Progress tab." },
+  { "id": 8, "category": "Academics", "question": "What is the minimum attendance requirement for final exam eligibility?", "answer": "Students must maintain at least 80% aggregate attendance across theory and laboratory sessions." },
+  { "id": 9, "category": "Events", "question": "Is there a fee for attending technical workshops?", "answer": "Most departmental technical workshops are fully sponsored and complimentary for enrolled students." },
+  { "id": 10, "category": "Campus", "question": "What are the Central Library operating hours during exams?", "answer": "The central library remains open from 8:00 AM until 11:00 PM throughout the semester examination period." },
+  { "id": 11, "category": "Campus", "question": "How can I book a sports ground slot?", "answer": "Sports facilities can be reserved at the Student Activity Center with your digital student ID." },
+  { "id": 12, "category": "Technical", "question": "Does StudentHub support offline data browsing?", "answer": "Yes, recently fetched event lists and FAQ responses are cached in localStorage for offline access." },
+  { "id": 13, "category": "Admissions", "question": "Are merit-based scholarships available for top performers?", "answer": "Yes, CHARUSAT offers generous merit scholarships to students ranking in the top 3 of each engineering department." },
+  { "id": 14, "category": "Events", "question": "How do teams submit project repos for hackathons?", "answer": "Teams submit their public GitHub repository links through the Event Management submission portal." },
+  { "id": 15, "category": "Campus", "question": "Where is the university medical center located?", "answer": "The CHARUSAT healthcare center is situated adjacent to the central sports arena and is open 24/7." }
+]
