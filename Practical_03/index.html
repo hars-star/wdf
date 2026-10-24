@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive UI Design (CSS Grid & Flexbox)</title>
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Flexbox Announcement Bar -->
+    <div class="announcement-bar">
+        <div>
+            <span class="badge">NEW</span>
+            Odd Semester 2026-27 Registration & HackCHARUSAT Event Live!
+        </div>
+        <div>Campus Helpdesk: +91 2697 265011</div>
+    </div>
+
+    <!-- Flexbox Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Student<span>Hub</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events Grid</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="register.html">Registration</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="register.html" class="btn btn-primary">Join Portal</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <!-- Hero Section with CSS Grid -->
+        <section class="hero-grid">
+            <div class="hero-text">
+                <h1>Next-Gen Academic & Event Management Portal</h1>
+                <p>Designed using modern CSS Grid and Flexbox for seamless adaptation across mobile smartphones, tablets, and high-resolution desktop displays.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="events.html" class="btn btn-primary" style="background: #ffffff; color: #1e3a8a;">Browse Events</a>
+                    <a href="dashboard.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4);">View Dashboard</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <h3>2,500+</h3>
+                    <p>Active Students</p>
+                </div>
+                <div class="stat-box">
+                    <h3>45+</h3>
+                    <p>Annual Events</p>
+                </div>
+                <div class="stat-box">
+                    <h3>99.9%</h3>
+                    <p>Uptime on Apache</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Mobile Responsive</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two Column Main Layout (Grid) -->
+        <div class="page-layout">
+            <div>
+                <h2 style="margin-bottom: 1.25rem;">Featured Academic Events (CSS Grid 3-Column)</h2>
+                <div class="cards-grid-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag">Technical</span>
+                            <small style="color: var(--text-muted);">Nov 15, 2026</small>
+                        </div>
+                        <h3 class="card-title">HackCHARUSAT 2026</h3>
+                        <p class="card-body">A national level 36-hour hackathon focused on AI, Web3, and Scalable Cloud Architectures.</p>
+                        <div class="card-footer">
+                            <span style="font-weight: 700; color: var(--accent);">150 Seats</span>
+                            <a href="events.html" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Register</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag" style="background: #fef3c7; color: #b45309;">Workshop</span>
+                            <small style="color: var(--text-muted);">Nov 20, 2026</small>
+                        </div>
+                        <h3 class="card-title">Cloud & DevOps Clinic</h3>
+                        <p class="card-body">Hands-on masterclass covering Docker containers, CI/CD pipelines, and AWS deployment techniques.</p>
+                        <div class="card-footer">
+                            <span style="font-weight: 700; color: var(--accent);">60 Seats</span>
+                            <a href="events.html" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Register</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-tag" style="background: #fce7f3; color: #be185d;">Cultural</span>
+                            <small style="color: var(--text-muted);">Dec 05, 2026</small>
+                        </div>
+                        <h3 class="card-title">Spoural Fest 2026</h3>
+                        <p class="card-body">The biggest intra-university cultural celebration with music, choreography, drama, and artistic showcases.</p>
+                        <div class="card-footer">
+                            <span style="font-weight: 700; color: var(--accent);">500 Seats</span>
+                            <a href="events.html" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aside with Flexbox List -->
+            <aside>
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;">Quick Navigation</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                        <a href="dashboard.html" class="btn btn-secondary" style="justify-content: flex-start;">📊 View Dashboard</a>
+                        <a href="register.html" class="btn btn-secondary" style="justify-content: flex-start;">📝 Student Registration</a>
+                        <a href="contact.html" class="btn btn-secondary" style="justify-content: flex-start;">📞 Contact Support</a>
+                        <a href="about.html" class="btn btn-secondary" style="justify-content: flex-start;">ℹ️ About Framework</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 style="margin-bottom: 0.75rem;">Layout Techniques</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                        <strong>CSS Grid:</strong> Multi-column cards, Hero block, Dashboard statistics.<br><br>
+                        <strong>CSS Flexbox:</strong> Sticky navigation, announcement bar, form inputs, button groups.
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Responsive Footer (Grid) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>StudentHub</h4>
+                <p style="color: #94a3b8; font-size: 0.9rem;">Modern Web Development Frameworks practical submission for Charotar University of Science and Technology.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html">Events Grid</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="register.html">Registration</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026-27 ITUE203 Practical 3 - Responsive UI Design.</span>
+            <span>CHARUSAT - Faculty of Technology and Engineering</span>
+        </div>
+    </footer>
+</body>
+</html>

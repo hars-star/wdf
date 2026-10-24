@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive Events Grid</title>
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Student<span>Hub</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html" class="active">Events Grid</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <div style="margin-bottom: 2rem;">
+            <h1>Campus Events Catalog (CSS Grid Layout)</h1>
+            <p style="color: var(--text-muted);">
+                Fluid responsive grid dynamically scaling from 1 column on mobile devices to 3 columns on desktop.
+            </p>
+        </div>
+
+        <div class="cards-grid-3">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-tag">Technical</span>
+                    <small>Nov 15, 2026</small>
+                </div>
+                <h3 class="card-title">HackCHARUSAT 2026</h3>
+                <p class="card-body">A 36-hour national level flagship hackathon with tracks on AI, Web3, Cloud, and Sustainability.</p>
+                <div class="card-footer">
+                    <span><strong>Auditorium</strong></span>
+                    <span style="color: var(--accent); font-weight: bold;">150 Seats</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-tag" style="background: #fef3c7; color: #b45309;">Workshop</span>
+                    <small>Nov 20, 2026</small>
+                </div>
+                <h3 class="card-title">Cloud & DevOps Masterclass</h3>
+                <p class="card-body">Hands-on intensive workshop exploring Docker, Kubernetes, CI/CD pipelines, and AWS deployment.</p>
+                <div class="card-footer">
+                    <span><strong>FTE Lab 304</strong></span>
+                    <span style="color: var(--accent); font-weight: bold;">60 Seats</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-tag" style="background: #fce7f3; color: #be185d;">Cultural</span>
+                    <small>Dec 05, 2026</small>
+                </div>
+                <h3 class="card-title">Spoural Cultural Fest 2026</h3>
+                <p class="card-body">Annual intra-university cultural festival featuring music, dance, theatre, fine arts, and celebrity night.</p>
+                <div class="card-footer">
+                    <span><strong>Amphitheatre</strong></span>
+                    <span style="color: var(--accent); font-weight: bold;">500 Seats</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-tag" style="background: #ede9fe; color: #6d28d9;">Seminar</span>
+                    <small>Nov 10, 2026</small>
+                </div>
+                <h3 class="card-title">AI & LLM Symposium</h3>
+                <p class="card-body">Keynotes by industry pioneers on generative AI frontiers, prompt engineering, and ethical AI deployment.</p>
+                <div class="card-footer">
+                    <span><strong>Seminar Hall B</strong></span>
+                    <span style="color: var(--accent); font-weight: bold;">120 Seats</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-tag" style="background: #dcfce7; color: #15803d;">Sports</span>
+                    <small>Nov 25, 2026</small>
+                </div>
+                <h3 class="card-title">Inter-College Football</h3>
+                <p class="card-body">Annual 7-a-side football tournament with trophies and athletic showcases across university faculties.</p>
+                <div class="card-footer">
+                    <span><strong>Sports Ground</strong></span>
+                    <span style="color: var(--accent); font-weight: bold;">80 Seats</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-tag" style="background: #fef3c7; color: #b45309;">Workshop</span>
+                    <small>Nov 28, 2026</small>
+                </div>
+                <h3 class="card-title">Full-Stack Web Bootcamp</h3>
+                <p class="card-body">Master modern full-stack web engineering, building dynamic single-page applications and secure APIs.</p>
+                <div class="card-footer">
+                    <span><strong>IT Dept Lab 1</strong></span>
+                    <span style="color: var(--accent); font-weight: bold;">50 Seats</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <span>&copy; 2026-27 ITUE203 Practical 3 - Events Responsive Layout</span>
+            <span>CHARUSAT FTE</span>
+        </div>
+    </footer>
+</body>
+</html>

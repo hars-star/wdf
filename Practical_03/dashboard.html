@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive Dashboard (CSS Grid & Flexbox)</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .responsive-table-container {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th, td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background: #f8fafc;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+        tr:hover td {
+            background-color: #f1f5f9;
+        }
+        .status-pill {
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .status-active { background: #dcfce7; color: #15803d; }
+        .status-pending { background: #fef9c3; color: #a16207; }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Student<span>Hub</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events Grid</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="register.html" class="btn btn-primary">Join Portal</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+                <h1>Student Academic Dashboard</h1>
+                <p style="color: var(--text-muted);">Welcome back, Harshit Dhanani (Enrollment No: 23IT001 | 3rd Year B.Tech IT)</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+                <button class="btn btn-secondary">Print Report</button>
+                <button class="btn btn-primary">+ Register New Event</button>
+            </div>
+        </div>
+
+        <!-- 4-Column Responsive Grid for KPI Cards -->
+        <div class="cards-grid-4">
+            <div class="card">
+                <span class="card-tag">Academics</span>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">Cumulative GPA</p>
+                <h3 style="font-size: 2rem; color: var(--primary); margin: 0.2rem 0;">3.85</h3>
+                <small style="color: var(--accent); font-weight: 600;">Top 5% in FTE</small>
+            </div>
+            <div class="card">
+                <span class="card-tag" style="background: #e0e7ff; color: #4338ca;">Participation</span>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">Registered Events</p>
+                <h3 style="font-size: 2rem; color: #4338ca; margin: 0.2rem 0;">4</h3>
+                <small style="color: var(--text-muted);">2 Upcoming, 2 Completed</small>
+            </div>
+            <div class="card">
+                <span class="card-tag" style="background: #fef3c7; color: #b45309;">Attendance</span>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">Overall Attendance</p>
+                <h3 style="font-size: 2rem; color: #b45309; margin: 0.2rem 0;">94.2%</h3>
+                <small style="color: var(--accent); font-weight: 600;">Eligible for Honors</small>
+            </div>
+            <div class="card">
+                <span class="card-tag" style="background: #dcfce7; color: #15803d;">Credits</span>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">Credits Earned</p>
+                <h3 style="font-size: 2rem; color: #15803d; margin: 0.2rem 0;">112</h3>
+                <small style="color: var(--text-muted);">Target: 160 Credits</small>
+            </div>
+        </div>
+
+        <!-- Responsive Table Container -->
+        <h2 style="margin-bottom: 1rem;">My Event Enrollments</h2>
+        <div class="responsive-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Category</th>
+                        <th>Event Date</th>
+                        <th>Venue</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>HackCHARUSAT 2026</strong></td>
+                        <td><span class="card-tag">Technical</span></td>
+                        <td>Nov 15-16, 2026</td>
+                        <td>Central Auditorium</td>
+                        <td><span class="status-pill status-active">Confirmed</span></td>
+                        <td><button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">View Ticket</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cloud & DevOps Masterclass</strong></td>
+                        <td><span class="card-tag" style="background: #fef3c7; color: #b45309;">Workshop</span></td>
+                        <td>Nov 20, 2026</td>
+                        <td>Lab 304, FTE</td>
+                        <td><span class="status-pill status-active">Confirmed</span></td>
+                        <td><button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">View Ticket</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spoural Cultural Fest 2026</strong></td>
+                        <td><span class="card-tag" style="background: #fce7f3; color: #be185d;">Cultural</span></td>
+                        <td>Dec 05, 2026</td>
+                        <td>Amphitheatre</td>
+                        <td><span class="status-pill status-pending">Waitlist #3</span></td>
+                        <td><button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <span>&copy; 2026-27 ITUE203 Practical 3 - Dashboard Responsive Layout</span>
+            <span>CHARUSAT FTE</span>
+        </div>
+    </footer>
+</body>
+</html>

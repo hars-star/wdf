@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - About (Responsive UI)</title>
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Student<span>Hub</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="events.html">Events Grid</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <div class="page-layout">
+            <div>
+                <h1 style="margin-bottom: 1rem;">About StudentHub Project</h1>
+                <p style="margin-bottom: 1rem; color: var(--text-muted);">
+                    StudentHub is developed as part of the curriculum for <strong>ITUE203: Web Development Frameworks</strong> at CHARUSAT. The platform provides an integrated academic interface for student profiles, event registrations, and administrative monitoring.
+                </p>
+
+                <h2 style="margin: 1.5rem 0 1rem;">Responsive Architecture Highlights</h2>
+                <div class="cards-grid-3" style="margin-bottom: 1.5rem;">
+                    <div class="card">
+                        <h3>CSS Grid</h3>
+                        <p class="card-body">Utilized for 2-dimensional layouts, cards grid with <code>repeat(auto-fit, minmax(...))</code>, and multi-tier dashboard summaries.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CSS Flexbox</h3>
+                        <p class="card-body">Implemented for 1-dimensional components like navigation bars, breadcrumbs, button clusters, and form row alignment.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Media Queries</h3>
+                        <p class="card-body">Ensures clean adaptation across small mobile screens (&lt;640px), tablets (768px-1024px), and ultra-wide desktops.</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside>
+                <div class="card">
+                    <h3>Institution</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+                        <strong>Charotar University of Science and Technology (CHARUSAT)</strong><br>
+                        Faculty of Technology and Engineering (FTE)<br>
+                        Department of Information Technology
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <span>&copy; 2026-27 ITUE203 Practical 3 - About Page</span>
+            <span>CHARUSAT FTE</span>
+        </div>
+    </footer>
+</body>
+</html>

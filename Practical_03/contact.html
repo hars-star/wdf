@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive Contact</title>
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Student<span>Hub</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events Grid</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <div class="page-layout">
+            <div class="card" style="padding: 2rem;">
+                <h1 style="margin-bottom: 0.5rem;">Contact StudentHub Support</h1>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Reach out to the university event coordination desk or technical support team.</p>
+
+                <form action="#" method="post">
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="name">Your Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="e.g. Harshit Dhanani">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="name@domain.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Inquiry Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Subject of your message">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Describe your question or feedback..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <aside>
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h3>Contact Information</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.8;">
+                        📍 <strong>Campus Address:</strong><br>
+                        CHARUSAT Campus, Changa<br>
+                        Taluka: Petlad, Dist: Anand<br>
+                        Gujarat - 388421<br><br>
+                        📞 <strong>Phone:</strong> +91 2697 265011<br>
+                        ✉️ <strong>Email:</strong> support@studenthub.charusat.ac.in
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <span>&copy; 2026-27 ITUE203 Practical 3 - Contact Page</span>
+            <span>CHARUSAT FTE</span>
+        </div>
+    </footer>
+</body>
+</html>

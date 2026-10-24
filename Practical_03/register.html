@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive Registration Form (Grid & Flexbox)</title>
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Student<span>Hub</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events Grid</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="register.html" class="active">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <div class="form-card">
+            <h1 style="font-size: 1.85rem; margin-bottom: 0.5rem; text-align: center;">Student Portal Registration</h1>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
+                Responsive CSS Grid multi-column form structure that dynamically stacks on mobile viewports.
+            </p>
+
+            <form action="#" method="post">
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required placeholder="e.g. Harshit">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required placeholder="e.g. Dhanani">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="email">CHARUSAT Student Email</label>
+                        <input type="email" id="email" name="email" required placeholder="student@charusat.edu.in">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" required placeholder="10-digit number">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department" name="department" required>
+                            <option value="">Choose Department</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="CE">Computer Engineering</option>
+                            <option value="CSE">Computer Science</option>
+                            <option value="EC">Electronics & Comm.</option>
+                            <option value="ME">Mechanical Engineering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year of Study</label>
+                        <select id="year" name="year" required>
+                            <option value="1">1st Year (Semester 1-2)</option>
+                            <option value="2">2nd Year (Semester 3-4)</option>
+                            <option value="3" selected>3rd Year (Semester 5-6)</option>
+                            <option value="4">4th Year (Semester 7-8)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="password">Create Password</label>
+                        <input type="password" id="password" name="password" required minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required minlength="8">
+                    </div>
+                </div>
+
+                <div class="form-group" style="flex-direction: row; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
+                    <input type="checkbox" id="terms" name="terms" required style="width: auto;">
+                    <label for="terms" style="margin: 0; font-weight: normal; font-size: 0.9rem;">
+                        I agree to the student code of conduct and portal privacy terms.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem; margin-top: 1rem; font-size: 1rem;">
+                    Submit Registration
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <span>&copy; 2026-27 ITUE203 Practical 3 - Registration Form Layout</span>
+            <span>CHARUSAT FTE</span>
+        </div>
+    </footer>
+</body>
+</html>
