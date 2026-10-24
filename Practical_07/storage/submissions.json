@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2026-10-22 05:40:00",
+    "name": "Harshit Dhanani",
+    "email": "hrdhanani2117@gmail.com",
+    "mobile": "9898123456",
+    "department": "Information Technology",
+    "inquiry": "Interested in joining the HackCHARUSAT 2026 organizing team."
+  },
+  {
+    "timestamp": "2026-10-22 05:41:00",
+    "name": "Aarav Patel",
+    "email": "aarav.patel@studenthub.com",
+    "mobile": "9825012345",
+    "department": "Computer Engineering",
+    "inquiry": "Requesting workshop slides for Cloud & DevOps masterclass."
+  }
+]
