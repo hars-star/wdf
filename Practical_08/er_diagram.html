@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Practical 8: Entity-Relationship (ER) Model</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f8fafc; color: #0f172a; padding: 2rem; margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #2563eb; }
+        .diagram-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .er-table { background: #fff; border: 2px solid #cbd5e1; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.06); }
+        .er-table-header { background: #1e3a8a; color: #fff; padding: 0.8rem 1rem; font-weight: bold; font-size: 1.1rem; }
+        .field-row { display: flex; justify-content: space-between; padding: 0.5rem 1rem; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; }
+        .field-pk { background: #fef9c3; font-weight: bold; }
+        .field-fk { background: #eff6ff; font-weight: 600; }
+        .pill { font-size: 0.75rem; padding: 0.15rem 0.4rem; border-radius: 4px; font-weight: bold; }
+        .pk-pill { background: #eab308; color: #000; }
+        .fk-pill { background: #3b82f6; color: #fff; }
+        .rel-card { background: #fff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>StudentHub Normalized Relational Schema (ER Model)</h1>
+        <p style="color: #64748b;">3NF Normalized Relational Database Architecture on MySQL with Foreign Key Constraints & Triggers.</p>
+
+        <div class="diagram-grid">
+            <!-- Users Table -->
+            <div class="er-table">
+                <div class="er-table-header">users</div>
+                <div class="field-row field-pk"><span>id (INT UNSIGNED)</span> <span class="pill pk-pill">PK</span></div>
+                <div class="field-row"><span>name (VARCHAR 100)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>username (VARCHAR 50)</span> <span>UNIQUE</span></div>
+                <div class="field-row"><span>email (VARCHAR 150)</span> <span>UNIQUE</span></div>
+                <div class="field-row"><span>mobile (VARCHAR 15)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>password_hash (VARCHAR 255)</span> <span>BCRYPT</span></div>
+                <div class="field-row"><span>role (ENUM 'admin', 'student')</span> <span>DEFAULT 'student'</span></div>
+                <div class="field-row"><span>status (ENUM 'Active', 'Inactive')</span> <span>DEFAULT 'Active'</span></div>
+                <div class="field-row"><span>last_login (DATETIME)</span> <span>NULL</span></div>
+                <div class="field-row"><span>created_at (TIMESTAMP)</span> <span>CURRENT_TIMESTAMP</span></div>
+            </div>
+
+            <!-- Students Table -->
+            <div class="er-table">
+                <div class="er-table-header">students</div>
+                <div class="field-row field-pk"><span>id (INT UNSIGNED)</span> <span class="pill pk-pill">PK</span></div>
+                <div class="field-row field-fk"><span>user_id (INT UNSIGNED)</span> <span class="pill fk-pill">FK -> users.id</span></div>
+                <div class="field-row"><span>enrollment_no (VARCHAR 20)</span> <span>UNIQUE</span></div>
+                <div class="field-row"><span>name (VARCHAR 100)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>email (VARCHAR 150)</span> <span>UNIQUE</span></div>
+                <div class="field-row"><span>department (VARCHAR 50)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>course (VARCHAR 50)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>year (TINYINT)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>gender (ENUM)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>gpa (DECIMAL 3,2)</span> <span>3.50</span></div>
+            </div>
+
+            <!-- Events Table -->
+            <div class="er-table">
+                <div class="er-table-header">events</div>
+                <div class="field-row field-pk"><span>id (INT UNSIGNED)</span> <span class="pill pk-pill">PK</span></div>
+                <div class="field-row"><span>title (VARCHAR 150)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>description (TEXT)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>category (VARCHAR 50)</span> <span>Technical / Workshop...</span></div>
+                <div class="field-row"><span>venue (VARCHAR 150)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>event_date (DATE)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>max_seats (INT)</span> <span>DEFAULT 100</span></div>
+                <div class="field-row"><span>registered_count (INT)</span> <span>DEFAULT 0</span></div>
+                <div class="field-row"><span>poster_file (VARCHAR 255)</span> <span>NULL</span></div>
+                <div class="field-row"><span>status (ENUM)</span> <span>Upcoming / Closed</span></div>
+            </div>
+
+            <!-- Registrations Table -->
+            <div class="er-table">
+                <div class="er-table-header">registrations</div>
+                <div class="field-row field-pk"><span>id (INT UNSIGNED)</span> <span class="pill pk-pill">PK</span></div>
+                <div class="field-row field-fk"><span>student_id (INT UNSIGNED)</span> <span class="pill fk-pill">FK -> students.id</span></div>
+                <div class="field-row field-fk"><span>event_id (INT UNSIGNED)</span> <span class="pill fk-pill">FK -> events.id</span></div>
+                <div class="field-row"><span>registration_date (TIMESTAMP)</span> <span>CURRENT_TIMESTAMP</span></div>
+                <div class="field-row"><span>status (ENUM)</span> <span>Confirmed / Waitlisted</span></div>
+                <div class="field-row"><span>remarks (VARCHAR 255)</span> <span>NULL</span></div>
+            </div>
+
+            <!-- Audit Logs Table -->
+            <div class="er-table">
+                <div class="er-table-header">audit_logs</div>
+                <div class="field-row field-pk"><span>id (INT UNSIGNED)</span> <span class="pill pk-pill">PK</span></div>
+                <div class="field-row field-fk"><span>user_id (INT UNSIGNED)</span> <span class="pill fk-pill">FK -> users.id</span></div>
+                <div class="field-row"><span>username (VARCHAR 50)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>action (VARCHAR 50)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>entity (VARCHAR 50)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>details (TEXT)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>ip_address (VARCHAR 45)</span> <span>NOT NULL</span></div>
+                <div class="field-row"><span>created_at (TIMESTAMP)</span> <span>CURRENT_TIMESTAMP</span></div>
+            </div>
+        </div>
+
+        <div class="rel-card">
+            <h2>Relational Cardinalities</h2>
+            <ul style="line-height: 2;">
+                <li><strong>users</strong> (1) ── (0..1) <strong>students</strong>: One user record optionally maps to one student profile.</li>
+                <li><strong>students</strong> (1) ── (N) <strong>registrations</strong>: A student can register for multiple events.</li>
+                <li><strong>events</strong> (1) ── (N) <strong>registrations</strong>: An event has multiple student registrations.</li>
+                <li><strong>registrations</strong> has composite uniqueness constraint <code>UNIQUE(student_id, event_id)</code> preventing double-booking.</li>
+                <li><strong>users</strong> (1) ── (N) <strong>audit_logs</strong>: System actions traceable back to triggering administrator/user.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
