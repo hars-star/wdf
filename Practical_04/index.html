@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Practical 4: JavaScript DOM & UI Interactivity</title>
+    <link rel="stylesheet" href="css/interactivity.css">
+</head>
+<body>
+    <!-- 1. Notification Banner -->
+    <div id="notificationBanner" class="notification-banner">
+        <span>🎉 <strong>Notice:</strong> HackCHARUSAT 2026 early bird registrations close this Friday!</span>
+        <button id="closeBannerBtn" class="banner-close-btn" aria-label="Close notification banner">&times;</button>
+    </div>
+
+    <!-- Header with Hamburger and Theme Toggle -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">StudentHub <span>Interactive</span></a>
+            
+            <nav>
+                <ul id="navLinks" class="nav-links">
+                    <li><a href="#sliderSection">Highlights</a></li>
+                    <li><a href="#modalSection">Event Cards</a></li>
+                    <li><a href="#faqSection">FAQ Accordion</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Theme Switcher Button -->
+                <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+                    <span id="themeIcon">🌙</span>
+                    <span id="themeText">Dark Mode</span>
+                </button>
+
+                <!-- Hamburger Button for Mobile -->
+                <button id="hamburgerBtn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 2. Image / Content Slider (Carousel) -->
+        <section id="sliderSection" class="component-section">
+            <h2 class="section-title">1. Dynamic Content Slider (Carousel)</h2>
+            <p class="section-subtitle">Features automated slide progression, hover pause, next/prev arrow buttons, and indicator dots.</p>
+
+            <div class="slider-container">
+                <div class="slide active" style="background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff;">
+                    <div class="slide-content">
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.85rem;">Grand Tech Fest</span>
+                        <h3 style="margin-top: 0.8rem;">HackCHARUSAT 2026</h3>
+                        <p>36-hour continuous hackathon bringing together over 500 engineering developers and design innovators.</p>
+                        <button class="btn open-modal-btn" data-title="HackCHARUSAT 2026" data-desc="36 Hours of coding, mentoring from industry leaders, cash prizes of INR 2,00,000, and free food & stays.">Quick View Details</button>
+                    </div>
+                </div>
+
+                <div class="slide" style="background: linear-gradient(135deg, #065f46, #059669); color: #fff;">
+                    <div class="slide-content">
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.85rem;">Hands-on Training</span>
+                        <h3 style="margin-top: 0.8rem;">Cloud & DevOps Masterclass</h3>
+                        <p>Deep-dive into Docker containers, Kubernetes cluster management, AWS deployment pipelines, and observability.</p>
+                        <button class="btn open-modal-btn" data-title="Cloud & DevOps Masterclass" data-desc="Intensive 1-day lab workshop with personal AWS sandbox accounts and verified university certification.">Quick View Details</button>
+                    </div>
+                </div>
+
+                <div class="slide" style="background: linear-gradient(135deg, #831843, #db2777); color: #fff;">
+                    <div class="slide-content">
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.85rem;">Campus Vibrance</span>
+                        <h3 style="margin-top: 0.8rem;">Spoural Cultural Carnival 2026</h3>
+                        <p>Celebrating the arts with dance competitions, battle of bands, theatrical plays, and star celebrity night.</p>
+                        <button class="btn open-modal-btn" data-title="Spoural Cultural Carnival 2026" data-desc="Three evenings of electrifying cultural performances, food stalls, DJ night, and inter-collegiate contests.">Quick View Details</button>
+                    </div>
+                </div>
+
+                <!-- Slider Arrows -->
+                <button id="sliderPrev" class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
+                <button id="sliderNext" class="slider-btn next" aria-label="Next slide">&#10095;</button>
+
+                <!-- Slider Dots -->
+                <div id="sliderDots" class="slider-dots"></div>
+            </div>
+        </section>
+
+        <!-- 3. Modal Popup Trigger Cards -->
+        <section id="modalSection" class="component-section">
+            <h2 class="section-title">2. Modal Popup Dialog</h2>
+            <p class="section-subtitle">Click on any card to launch an interactive dialog overlay with backdrop blur, keyboard ESC dismissal, and click-outside handler.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div class="card" style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 8px;">
+                    <h3>AI & LLM Symposium</h3>
+                    <p style="color: var(--text-muted); margin: 0.5rem 0 1.25rem;">Explore large language models, agentic workflows, and real-world deployment challenges.</p>
+                    <button class="btn open-modal-btn" data-title="AI & LLM Symposium" data-desc="Keynote speaker from Google DeepMind and Microsoft AI on prompt engineering and agent reasoning frameworks.">View Event Modal</button>
+                </div>
+
+                <div class="card" style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 8px;">
+                    <h3>RoboWars Challenge</h3>
+                    <p style="color: var(--text-muted); margin: 0.5rem 0 1.25rem;">Combat robots in weight categories: 15kg and 30kg. Wired and wireless bots welcome.</p>
+                    <button class="btn open-modal-btn" data-title="RoboWars Challenge 2026" data-desc="Safety checks at 9 AM, qualifying rounds at 11 AM, and grand arena finals under floodlights at 5 PM.">View Event Modal</button>
+                </div>
+
+                <div class="card" style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 8px;">
+                    <h3>Toast Notification Demo</h3>
+                    <p style="color: var(--text-muted); margin: 0.5rem 0 1.25rem;">Test asynchronous client-side toast notifications without page reloads.</p>
+                    <button id="triggerToastBtn" class="btn btn-secondary">Trigger Toast Alert</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Collapsible FAQ Accordion -->
+        <section id="faqSection" class="component-section">
+            <h2 class="section-title">3. Collapsible FAQ Accordion</h2>
+            <p class="section-subtitle">Accessible accordion with ARIA attributes and smooth height animation.</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>How does the theme switcher store my preference?</span>
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>The theme switcher utilizes JavaScript's <code>localStorage.setItem('studenthub_theme', theme)</code> to persist your choice. When the page reloads, the script reads this value and immediately applies the corresponding <code>data-theme</code> attribute on the root <code>&lt;html&gt;</code> element.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>How is the modal accessible to keyboard users?</span>
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>When the modal opens, the backdrop prevents interaction with underlying elements, focus can be managed, and the user can close the modal at any time simply by pressing the <kbd>Escape</kbd> key or clicking outside the modal box.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Does the carousel slider pause when hovered?</span>
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Yes, event listeners for <code>mouseenter</code> and <code>mouseleave</code> pause and resume the <code>setInterval</code> timer, ensuring users have plenty of time to read slide content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Popup Structure -->
+    <div id="eventModal" class="modal-overlay" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <button id="closeModalBtn" class="modal-close-btn" aria-label="Close modal dialog">&times;</button>
+            <h2 id="modalEventTitle" style="color: var(--primary); margin-bottom: 0.75rem;">Event Details</h2>
+            <p id="modalEventDesc" style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">Event details loading...</p>
+            <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+                <button class="btn btn-secondary" onclick="document.getElementById('eventModal').classList.remove('open');">Dismiss</button>
+                <button class="btn" onclick="showToast('Registration intent logged!'); document.getElementById('eventModal').classList.remove('open');">Confirm RSVP</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
