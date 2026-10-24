@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Practical 5: Registration Form with Frontend Validation</title>
+    <link rel="stylesheet" href="css/validation.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <header class="form-header">
+            <h1>Student Portal Registration</h1>
+            <p>Complete the registration form. Fields marked with <span class="required-star">*</span> are mandatory.</p>
+        </header>
+
+        <!-- Success Banner -->
+        <div id="successBanner" class="success-banner" role="alert">
+            <h3>✅ Registration Validated Successfully!</h3>
+            <p>All client-side regular expressions and validation constraints were satisfied. Ready for submission to the backend processor.</p>
+        </div>
+
+        <form id="studentRegForm" novalidate aria-label="Student Registration Form">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullName">Full Name <span class="required-star">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Harshit Dhanani" autocomplete="name" required aria-describedby="fullNameError">
+                <div id="fullNameError" class="error-message" role="alert"></div>
+            </div>
+
+            <!-- Email & Mobile -->
+            <div class="form-row-2">
+                <div class="form-group">
+                    <label for="email">Student Email Address <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="student@charusat.edu.in" autocomplete="email" required aria-describedby="emailError">
+                    <div id="emailError" class="error-message" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number (10 Digits) <span class="required-star">*</span></label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="e.g. 9898123456" maxlength="10" required aria-describedby="mobileError">
+                    <div id="mobileError" class="error-message" role="alert"></div>
+                </div>
+            </div>
+
+            <!-- Course & Year -->
+            <div class="form-row-2">
+                <div class="form-group">
+                    <label for="course">Academic Course <span class="required-star">*</span></label>
+                    <select id="course" name="course" required aria-describedby="courseError">
+                        <option value="">-- Select Enrolled Course --</option>
+                        <option value="B.Tech IT">B.Tech Information Technology</option>
+                        <option value="B.Tech CE">B.Tech Computer Engineering</option>
+                        <option value="B.Tech CSE">B.Tech Computer Science & Engg</option>
+                        <option value="B.Tech EC">B.Tech Electronics & Comm.</option>
+                        <option value="B.Tech ME">B.Tech Mechanical Engineering</option>
+                    </select>
+                    <div id="courseError" class="error-message" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year of Study <span class="required-star">*</span></label>
+                    <select id="year" name="year" required aria-describedby="yearError">
+                        <option value="">-- Select Year --</option>
+                        <option value="1">1st Year (Semester 1 & 2)</option>
+                        <option value="2">2nd Year (Semester 3 & 4)</option>
+                        <option value="3">3rd Year (Semester 5 & 6)</option>
+                        <option value="4">4th Year (Semester 7 & 8)</option>
+                    </select>
+                    <div id="yearError" class="error-message" role="alert"></div>
+                </div>
+            </div>
+
+            <!-- Gender -->
+            <div id="genderContainer" class="form-group">
+                <label>Gender <span class="required-star">*</span></label>
+                <div class="radio-group" role="radiogroup" aria-labelledby="genderLabel">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+                <div class="error-message" role="alert"></div>
+            </div>
+
+            <!-- Password & Confirm Password -->
+            <div class="form-row-2">
+                <div class="form-group">
+                    <label for="password">Create Password <span class="required-star">*</span></label>
+                    <input type="password" id="password" name="password" autocomplete="new-password" placeholder="At least 8 chars" required aria-describedby="passwordError">
+                    
+                    <!-- Password Strength Meter -->
+                    <div class="strength-meter-container">
+                        <div class="strength-bar">
+                            <div id="strengthBarFill" class="strength-bar-fill"></div>
+                        </div>
+                        <div id="strengthText" class="strength-text" style="color: #64748b;">Password Strength: Not Entered</div>
+                        <ul class="strength-rules">
+                            <li id="rule-len">✓ Min 8 characters</li>
+                            <li id="rule-upper">✓ 1 Uppercase (A-Z)</li>
+                            <li id="rule-num">✓ 1 Number (0-9)</li>
+                            <li id="rule-spec">✓ 1 Special character (@$!%*?)</li>
+                        </ul>
+                    </div>
+                    <div id="passwordError" class="error-message" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password <span class="required-star">*</span></label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" placeholder="Re-enter password" required aria-describedby="confirmError">
+                    <div id="confirmError" class="error-message" role="alert"></div>
+                </div>
+            </div>
+
+            <!-- Canvas CAPTCHA -->
+            <div class="form-group">
+                <label for="captchaInput">Security Verification (CAPTCHA) <span class="required-star">*</span></label>
+                <div class="captcha-container">
+                    <canvas id="captchaCanvas" width="160" height="42" aria-label="CAPTCHA image verification code"></canvas>
+                    <button type="button" id="refreshCaptchaBtn" class="captcha-refresh-btn" title="Generate new code">🔄 Refresh</button>
+                </div>
+                <input type="text" id="captchaInput" name="captcha" placeholder="Enter characters displayed above" required aria-describedby="captchaError">
+                <div id="captchaError" class="error-message" role="alert"></div>
+            </div>
+
+            <!-- Terms & Conditions -->
+            <div id="termsContainer" class="form-group" style="margin-top: 0.5rem;">
+                <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-weight: normal; cursor: pointer;">
+                    <input type="checkbox" id="terms" name="terms" style="width: auto; margin-top: 0.25rem;" required>
+                    <span>I declare all entered academic details are authentic and agree to the <strong>CHARUSAT StudentHub</strong> Terms of Service.</span>
+                </label>
+                <div class="error-message" role="alert"></div>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Registration</button>
+        </form>
+    </div>
+
+    <script src="js/validation.js"></script>
+</body>
+</html>
